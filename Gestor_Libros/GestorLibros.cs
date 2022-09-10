@@ -109,10 +109,15 @@ namespace Gestor_Libros
             }
             else
             {
+                //obtenemos el titulo y el codigo
                 string titulo = dgvBook.CurrentRow.Cells[1].Value.ToString();
+                string codigo = dgvBook.CurrentRow.Cells[0].Value.ToString();
                 
+                //borramos el codigo de la lista y la fila del libro
                 dgvBook.Rows.Remove(dgvBook.CurrentRow);
+                listaCodigos.Remove(codigo);
 
+                //descontamos el titulo de los contadores
                 Libro.Descontar(titulo, ref libroVocal, ref libroNum, ref libroCons);
 
                 lblVocales.Text = libroVocal.ToString();
