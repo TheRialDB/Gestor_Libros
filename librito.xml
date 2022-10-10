@@ -1,0 +1,73 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <libros>
+    <Código>1</Código>
+    <Título>El señor de los anillos</Título>
+    <Autor>J. R. R. Tolkien</Autor>
+    <Editorial>cualquiera</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>2</Código>
+    <Título>EL fantasma de Canterville</Título>
+    <Autor>Oscar Wilde</Autor>
+    <Editorial>otra</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>3</Código>
+    <Título>Cementerio de Animales</Título>
+    <Autor>Stephen King</Autor>
+    <Editorial>alguna</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>4</Código>
+    <Título>100 años de soledad</Título>
+    <Autor>Gabriel García Marquez</Autor>
+    <Editorial>no se</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>5</Código>
+    <Título>La Vuelta al Mundo en 80 Dias</Título>
+    <Autor>Julio Verne</Autor>
+    <Editorial>cualquiera</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>6</Código>
+    <Título>IT </Título>
+    <Autor>Stephen King</Autor>
+    <Editorial>alguna</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>7 </Código>
+    <Título>El Principito</Título>
+    <Autor>Antoine de Saint-Exupéry</Autor>
+    <Editorial>no se</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>8</Código>
+    <Título>Harry Potter </Título>
+    <Autor>J. K. Rowling</Autor>
+    <Editorial>otra</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>9</Código>
+    <Título>Chapeucinho Vermelho</Título>
+    <Autor>Anónimo</Autor>
+    <Editorial>de alguien</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>0</Código>
+    <Título>El Flautista de Hamelin</Título>
+    <Autor>Los hermanos Grimm</Autor>
+    <Editorial>alguna</Editorial>
+    <Estado>Disponible</Estado>
+  </libros>
+</DocumentElement>

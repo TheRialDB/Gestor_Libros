@@ -29,6 +29,7 @@ namespace Backend
             this.editorial = editorial;
         }
 
+        //gets sets
         public string Codigo { get; set; }
 
         public string Titulo { get; set; }
@@ -36,37 +37,5 @@ namespace Backend
         public string Autor { get; set; }
 
         public string Editorial { get; set; }
-
-        public void Analizar(string titulo, ref int libroVocal, ref int libroNum, ref int libroCons)
-        {
-            if (Regex.IsMatch(titulo, @"^[a,e,i,o,u]"))
-            {
-                libroVocal++;
-            }
-            else if (Regex.IsMatch(titulo, @"^\d"))
-            {
-                libroNum++;
-            }
-            else
-            {
-                libroCons++;
-            }
-        }
-
-        public static void Descontar(string titulo, ref int libroVocal, ref int libroNum, ref int libroCons)
-        {
-            if (Regex.IsMatch(titulo, @"^[a,e,i,o,u]"))
-            {
-                libroVocal--;
-            }
-            else if (Regex.IsMatch(titulo, @"^\d"))
-            {
-                libroNum--;
-            }
-            else
-            {
-                libroCons--;
-            }
-        }
     }
 }
