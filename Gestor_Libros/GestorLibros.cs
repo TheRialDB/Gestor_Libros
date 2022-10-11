@@ -35,12 +35,12 @@ namespace Gestor_Libros
             dtLibros.Columns.Add("Título");
             dtLibros.Columns.Add("Autor");
             dtLibros.Columns.Add("Editorial");
+            dtLibros.Columns.Add("Género");
             dtLibros.Columns.Add("Estado");
 
             //lectura y carga de datos del dto
             Leer_DT();
             dgvBook.DataSource = dtLibros;
-
         }
 
         //boton para cargar
@@ -48,6 +48,8 @@ namespace Gestor_Libros
         {
             //creacion de nuevo libro con sus atributos
             Libro libro = new Libro();
+
+            int indice = cmbGenero.SelectedIndex;
 
             libro.Codigo = txtCode.Text;
             libro.Titulo = txtTitle.Text;
@@ -64,6 +66,8 @@ namespace Gestor_Libros
             }
             else
             {
+                libro.Genero = cmbGenero.Items[indice].ToString();
+                //validacion de codigo existente
                 int fila = BuscarCodigo(libro.Codigo);
                 if (fila != -1)
                 {
@@ -74,17 +78,15 @@ namespace Gestor_Libros
                     estado = "Disponible";
 
                     //agregamos el nuevo libro a la lista
-                    dtLibros.Rows.Add(new object[] { libro.Codigo, libro.Titulo, libro.Autor, libro.Editorial, estado });
+                    dtLibros.Rows.Add(new object[] { libro.Codigo, libro.Titulo, libro.Autor, libro.Editorial, libro.Genero, estado });
                     dtLibros.WriteXml(DIRECCION_XML + "librito.xml");
 
-                    dgvBook.DataSource = null;
-                    dgvBook.DataSource = dtLibros;
-
-                    //limpieza de txts
+                    //limpieza de txts y cmb
                     txtCode.Clear();
                     txtTitle.Clear();
                     txtAuthor.Clear();
                     txtEditorial.Clear();
+                    cmbGenero.SelectedIndex = -1;
                 }
             }
         }
@@ -119,66 +121,24 @@ namespace Gestor_Libros
             }
             else
             {
-                //validacion de disponibilidad
-                string disponibilidad = dgvBook.CurrentRow.Cells[4].Value.ToString();
-                if (disponibilidad == "Prestado")
-                {
-                    MessageBox.Show(ERROR_LIBRO_PRESTADO);
-                }
-                else
-                {
-                    //abrimos el 2do form con el codigo y la disponibilidad
-                    GestorPrestamos gestorPrestamos = new GestorPrestamos(dgvBook.CurrentRow.Cells[0].Value.ToString(), disponibilidad);
-                    gestorPrestamos.ShowDialog();
+                string disponibilidad = dgvBook.CurrentRow.Cells[5].Value.ToString();
 
-                    //cambio de la disponibilidad en caso de cambio
-                    if (gestorPrestamos.bandera)
-                    {
-                        string codigo = dgvBook.CurrentRow.Cells[0].Value.ToString();
-                        string titulo = dgvBook.CurrentRow.Cells[1].Value.ToString();
-                        string autor = dgvBook.CurrentRow.Cells[2].Value.ToString();
-                        string editorial = dgvBook.CurrentRow.Cells[3].Value.ToString();
-                        estado = "Prestado";
-                        dgvBook.Rows.Remove(dgvBook.CurrentRow);
-                        dtLibros.Rows.Add(new object[] { codigo, titulo, autor, editorial, estado });
-                    }
-                }
-            }
-        }
+                //abrimos el 2do form con el codigo y la disponibilidad
+                GestorPrestamos gestorPrestamos = new GestorPrestamos(dgvBook.CurrentRow.Cells[0].Value.ToString(), disponibilidad);
+                gestorPrestamos.ShowDialog();
 
-        //boton de devoluciones
-        private void btnDevoluciones_Click(object sender, EventArgs e)
-        {
-            //validacion de codigo
-            if (dgvBook.CurrentRow == null)
-            {
-                MessageBox.Show(ERROR_CODIGO_PRESTADO);
-            }
-            else
-            {
-                //validacion de disponibilidad
-                string disponibilidad = dgvBook.CurrentRow.Cells[4].Value.ToString();
-                if (disponibilidad == "Disponible")
+                //cambio de la disponibilidad en caso de cambio
+                if (gestorPrestamos.bandera)
                 {
-                    MessageBox.Show(ERROR_LIBRO_PRESTADO);
-                }
-                else
-                {
-                    //abrimos el 2do form con el codigo y la disponibilidad
-                    GestorPrestamos gestorPrestamos = new GestorPrestamos(dgvBook.CurrentRow.Cells[0].Value.ToString(), disponibilidad);
-                    gestorPrestamos.ShowDialog();
+                    string codigo = dgvBook.CurrentRow.Cells[0].Value.ToString();
+                    string titulo = dgvBook.CurrentRow.Cells[1].Value.ToString();
+                    string autor = dgvBook.CurrentRow.Cells[2].Value.ToString();
+                    string editorial = dgvBook.CurrentRow.Cells[3].Value.ToString();
+                    string genero = dgvBook.CurrentRow.Cells[4].Value.ToString();
+                    dgvBook.Rows.Remove(dgvBook.CurrentRow);
 
-                    //cambio de la disponibilidad en caso de cambio
-                    if (gestorPrestamos.bandera)
-                    {
-                        string codigo = dgvBook.CurrentRow.Cells[0].Value.ToString();
-                        string titulo = dgvBook.CurrentRow.Cells[1].Value.ToString();
-                        string autor = dgvBook.CurrentRow.Cells[2].Value.ToString();
-                        string editorial = dgvBook.CurrentRow.Cells[3].Value.ToString();
-                        estado = "Disponible";
-                        dgvBook.Rows.Remove(dgvBook.CurrentRow);
-                        dtLibros.Rows.Add(new object[] { codigo, titulo, autor, editorial, estado });
-                    }
+                    //-------------------------------------------------------------------------operador ternario
+                    dtLibros.Rows.Add(new object[] { codigo, titulo, autor, editorial, genero, disponibilidad == "Disponible" ? "Prestado" : "Disponible" });
                 }
             }
         }
@@ -202,6 +162,11 @@ namespace Gestor_Libros
         private void txtFiltrarCodigo_TextChanged(object sender, EventArgs e)
         {
             dtLibros.DefaultView.RowFilter = $"Código LIKE '{txtFiltrarCodigo.Text}%'";
+        }
+
+        private void txtFiltrarGenero_TextChanged(object sender, EventArgs e)
+        {
+            dtLibros.DefaultView.RowFilter = $"Género LIKE '{txtFiltrarGenero.Text}%'";
         }
 
         //metodo para buscar codigo
@@ -246,6 +211,11 @@ namespace Gestor_Libros
                 epvTextos.SetError(txtEditorial, "llenar campo");
                 validar = true;
             }
+            if (cmbGenero.SelectedIndex == -1)
+            {
+                epvTextos.SetError(cmbGenero, "llenar campo");
+                validar = true;
+            }
             return validar;
         }
         //metodo para leer el datatable
@@ -256,13 +226,5 @@ namespace Gestor_Libros
                 dtLibros.ReadXml(DIRECCION_XML + "librito.xml");
             }
         }
-
-        private void btnGestor_Click(object sender, EventArgs e)
-        {
-            GestorPrestamos gestorPrestamos = new GestorPrestamos();
-            gestorPrestamos.ShowDialog();
-        }
-
-        //TODO:programar button1
     }
 }

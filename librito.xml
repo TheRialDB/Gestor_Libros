@@ -1,17 +1,27 @@
 <?xml version="1.0" standalone="yes"?>
 <DocumentElement>
   <libros>
+    <Código>0</Código>
+    <Título>El Flautista de Hamelin</Título>
+    <Autor>Los hermanos Grimm</Autor>
+    <Editorial>alguna</Editorial>
+    <Género>Infantil</Género>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
     <Código>1</Código>
-    <Título>El señor de los anillos</Título>
+    <Título>El Señor de los Anillos</Título>
     <Autor>J. R. R. Tolkien</Autor>
     <Editorial>cualquiera</Editorial>
+    <Género>Otro</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
     <Código>2</Código>
-    <Título>EL fantasma de Canterville</Título>
+    <Título>El Fantasma Canterville</Título>
     <Autor>Oscar Wilde</Autor>
     <Editorial>otra</Editorial>
+    <Género>Terror</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
@@ -19,13 +29,15 @@
     <Título>Cementerio de Animales</Título>
     <Autor>Stephen King</Autor>
     <Editorial>alguna</Editorial>
+    <Género>Terror</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
     <Código>4</Código>
-    <Título>100 años de soledad</Título>
+    <Título>100 Años de Soledad</Título>
     <Autor>Gabriel García Marquez</Autor>
     <Editorial>no se</Editorial>
+    <Género>Otro</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
@@ -33,27 +45,31 @@
     <Título>La Vuelta al Mundo en 80 Dias</Título>
     <Autor>Julio Verne</Autor>
     <Editorial>cualquiera</Editorial>
+    <Género>Otro</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
     <Código>6</Código>
-    <Título>IT </Título>
+    <Título>IT</Título>
     <Autor>Stephen King</Autor>
     <Editorial>alguna</Editorial>
+    <Género>Terror</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
-    <Código>7 </Código>
+    <Código>7</Código>
     <Título>El Principito</Título>
     <Autor>Antoine de Saint-Exupéry</Autor>
     <Editorial>no se</Editorial>
+    <Género>Infantil</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
     <Código>8</Código>
-    <Título>Harry Potter </Título>
+    <Título>Harry Potter</Título>
     <Autor>J. K. Rowling</Autor>
     <Editorial>otra</Editorial>
+    <Género>Otro</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
@@ -61,13 +77,31 @@
     <Título>Chapeucinho Vermelho</Título>
     <Autor>Anónimo</Autor>
     <Editorial>de alguien</Editorial>
+    <Género>Infantil</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
-    <Código>0</Código>
-    <Título>El Flautista de Hamelin</Título>
-    <Autor>Los hermanos Grimm</Autor>
-    <Editorial>alguna</Editorial>
+    <Código>10</Código>
+    <Título>El Retrato de Doriam Gray</Título>
+    <Autor>Oscar Wilde</Autor>
+    <Editorial>qsy</Editorial>
+    <Género>Otro</Género>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>11</Código>
+    <Título>Cancion de Navidad </Título>
+    <Autor>Charles Dickens</Autor>
+    <Editorial>no se</Editorial>
+    <Género>Otro</Género>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>12</Código>
+    <Título>22/11/63</Título>
+    <Autor>Stephen King</Autor>
+    <Editorial>otra</Editorial>
+    <Género>Ciencia Ficción</Género>
     <Estado>Disponible</Estado>
   </libros>
 </DocumentElement>

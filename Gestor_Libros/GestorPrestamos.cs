@@ -28,7 +28,7 @@ namespace Gestor_Libros
         const string LIBRO_PRESTADO = "El libro fue prestado";
         const string DIRECCION_XML = @"C:\Users\Usuario\OneDrive\Escritorio\FACU\PROGRAMACIÓN\vs2022\Gestor_Libros\";
 
-        //constructor
+        //constructores
         public GestorPrestamos(string codigo, string estado)
         {
             InitializeComponent();
@@ -89,16 +89,19 @@ namespace Gestor_Libros
                 }
                 else
                 {
-                    //carga de prestamos
-                    dtPersonas.Rows.Add(new object[] { persona.Nombre, persona.Apellido, persona.Dni, dato });
-                    dtPersonas.WriteXml(DIRECCION_XML + "personitas.xml");
+                    if (valor == "Disponible")
+                    {
+                        //carga de prestamos
+                        dtPersonas.Rows.Add(new object[] { persona.Nombre, persona.Apellido, persona.Dni, dato });
+                        dtPersonas.WriteXml(DIRECCION_XML + "personitas.xml");
 
-                    dgvPersonas.DataSource = null;
-                    dgvPersonas.DataSource = dtPersonas;
+                        dgvPersonas.DataSource = null;
+                        dgvPersonas.DataSource = dtPersonas;
 
-                    MessageBox.Show(LIBRO_PRESTADO);
-                    bandera = true;
-                    this.Close();
+                        MessageBox.Show(LIBRO_PRESTADO);
+                        bandera = true;
+                        this.Close();
+                    }
                 }
             }
         }

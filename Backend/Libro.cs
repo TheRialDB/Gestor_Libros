@@ -14,6 +14,7 @@ namespace Backend
         private string titulo;
         private string autor;
         private string editorial;
+        private string genero;
 
         //constructor vacio
         public Libro()
@@ -21,12 +22,13 @@ namespace Backend
 
         }
         //constructor con parametros
-        public Libro(string codigo, string titulo, string autor, string editorial)
+        public Libro(string codigo, string titulo, string autor, string editorial, string genero)
         {
             this.codigo = codigo;
             this.titulo = titulo;
             this.autor = autor;
             this.editorial = editorial;
+            this.genero = genero;
         }
 
         //gets sets
@@ -37,5 +39,7 @@ namespace Backend
         public string Autor { get; set; }
 
         public string Editorial { get; set; }
+
+        public string Genero { get; set; }  
     }
 }

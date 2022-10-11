@@ -51,15 +51,17 @@
             this.btnPrestamos = new System.Windows.Forms.Button();
             this.lblFiltroCodigo = new System.Windows.Forms.Label();
             this.txtFiltrarCodigo = new System.Windows.Forms.TextBox();
-            this.btnDevoluciones = new System.Windows.Forms.Button();
-            this.btnGestor = new System.Windows.Forms.Button();
+            this.cmbGenero = new System.Windows.Forms.ComboBox();
+            this.lblGenero = new System.Windows.Forms.Label();
+            this.lblFiltroGenero = new System.Windows.Forms.Label();
+            this.txtFiltrarGenero = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epvTextos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEditorial
             // 
-            this.txtEditorial.Location = new System.Drawing.Point(101, 91);
+            this.txtEditorial.Location = new System.Drawing.Point(118, 90);
             this.txtEditorial.Name = "txtEditorial";
             this.txtEditorial.Size = new System.Drawing.Size(100, 20);
             this.txtEditorial.TabIndex = 33;
@@ -67,7 +69,7 @@
             // lblEditorial
             // 
             this.lblEditorial.AutoSize = true;
-            this.lblEditorial.Location = new System.Drawing.Point(19, 94);
+            this.lblEditorial.Location = new System.Drawing.Point(45, 93);
             this.lblEditorial.Name = "lblEditorial";
             this.lblEditorial.Size = new System.Drawing.Size(44, 13);
             this.lblEditorial.TabIndex = 32;
@@ -79,13 +81,13 @@
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBook.Location = new System.Drawing.Point(274, 12);
             this.dgvBook.Name = "dgvBook";
-            this.dgvBook.Size = new System.Drawing.Size(539, 264);
+            this.dgvBook.Size = new System.Drawing.Size(645, 264);
             this.dgvBook.TabIndex = 25;
             // 
             // btnLoad
             // 
             this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.Location = new System.Drawing.Point(22, 151);
+            this.btnLoad.Location = new System.Drawing.Point(48, 145);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 24;
@@ -95,21 +97,21 @@
             // 
             // txtAuthor
             // 
-            this.txtAuthor.Location = new System.Drawing.Point(101, 64);
+            this.txtAuthor.Location = new System.Drawing.Point(118, 64);
             this.txtAuthor.Name = "txtAuthor";
             this.txtAuthor.Size = new System.Drawing.Size(100, 20);
             this.txtAuthor.TabIndex = 23;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(101, 38);
+            this.txtTitle.Location = new System.Drawing.Point(118, 38);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(100, 20);
             this.txtTitle.TabIndex = 22;
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(101, 12);
+            this.txtCode.Location = new System.Drawing.Point(118, 12);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(100, 20);
             this.txtCode.TabIndex = 21;
@@ -117,7 +119,7 @@
             // lblAutor
             // 
             this.lblAutor.AutoSize = true;
-            this.lblAutor.Location = new System.Drawing.Point(19, 67);
+            this.lblAutor.Location = new System.Drawing.Point(45, 67);
             this.lblAutor.Name = "lblAutor";
             this.lblAutor.Size = new System.Drawing.Size(32, 13);
             this.lblAutor.TabIndex = 20;
@@ -126,7 +128,7 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(19, 41);
+            this.lblTitulo.Location = new System.Drawing.Point(45, 41);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(35, 13);
             this.lblTitulo.TabIndex = 19;
@@ -135,7 +137,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(19, 15);
+            this.lblCodigo.Location = new System.Drawing.Point(45, 15);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 18;
@@ -144,7 +146,7 @@
             // lblFiltroTitulo
             // 
             this.lblFiltroTitulo.AutoSize = true;
-            this.lblFiltroTitulo.Location = new System.Drawing.Point(176, 198);
+            this.lblFiltroTitulo.Location = new System.Drawing.Point(173, 187);
             this.lblFiltroTitulo.Name = "lblFiltroTitulo";
             this.lblFiltroTitulo.Size = new System.Drawing.Size(63, 13);
             this.lblFiltroTitulo.TabIndex = 35;
@@ -152,7 +154,7 @@
             // 
             // txtFiltrarTitulo
             // 
-            this.txtFiltrarTitulo.Location = new System.Drawing.Point(12, 195);
+            this.txtFiltrarTitulo.Location = new System.Drawing.Point(12, 180);
             this.txtFiltrarTitulo.Name = "txtFiltrarTitulo";
             this.txtFiltrarTitulo.Size = new System.Drawing.Size(158, 20);
             this.txtFiltrarTitulo.TabIndex = 36;
@@ -160,7 +162,7 @@
             // 
             // txtFiltrarAutor
             // 
-            this.txtFiltrarAutor.Location = new System.Drawing.Point(12, 221);
+            this.txtFiltrarAutor.Location = new System.Drawing.Point(12, 206);
             this.txtFiltrarAutor.Name = "txtFiltrarAutor";
             this.txtFiltrarAutor.Size = new System.Drawing.Size(158, 20);
             this.txtFiltrarAutor.TabIndex = 37;
@@ -168,7 +170,7 @@
             // 
             // txtFiltrarEditorial
             // 
-            this.txtFiltrarEditorial.Location = new System.Drawing.Point(12, 247);
+            this.txtFiltrarEditorial.Location = new System.Drawing.Point(12, 232);
             this.txtFiltrarEditorial.Name = "txtFiltrarEditorial";
             this.txtFiltrarEditorial.Size = new System.Drawing.Size(158, 20);
             this.txtFiltrarEditorial.TabIndex = 38;
@@ -177,7 +179,7 @@
             // lblFiltroAutor
             // 
             this.lblFiltroAutor.AutoSize = true;
-            this.lblFiltroAutor.Location = new System.Drawing.Point(176, 224);
+            this.lblFiltroAutor.Location = new System.Drawing.Point(173, 209);
             this.lblFiltroAutor.Name = "lblFiltroAutor";
             this.lblFiltroAutor.Size = new System.Drawing.Size(60, 13);
             this.lblFiltroAutor.TabIndex = 39;
@@ -186,7 +188,7 @@
             // lblFiltroEditorial
             // 
             this.lblFiltroEditorial.AutoSize = true;
-            this.lblFiltroEditorial.Location = new System.Drawing.Point(176, 250);
+            this.lblFiltroEditorial.Location = new System.Drawing.Point(173, 235);
             this.lblFiltroEditorial.Name = "lblFiltroEditorial";
             this.lblFiltroEditorial.Size = new System.Drawing.Size(72, 13);
             this.lblFiltroEditorial.TabIndex = 40;
@@ -195,7 +197,7 @@
             // btnBorrar
             // 
             this.btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrar.Location = new System.Drawing.Point(126, 151);
+            this.btnBorrar.Location = new System.Drawing.Point(143, 145);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(75, 23);
             this.btnBorrar.TabIndex = 41;
@@ -211,18 +213,18 @@
             // btnPrestamos
             // 
             this.btnPrestamos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrestamos.Location = new System.Drawing.Point(274, 282);
+            this.btnPrestamos.Location = new System.Drawing.Point(761, 282);
             this.btnPrestamos.Name = "btnPrestamos";
             this.btnPrestamos.Size = new System.Drawing.Size(158, 23);
             this.btnPrestamos.TabIndex = 42;
-            this.btnPrestamos.Text = "Prestar";
+            this.btnPrestamos.Text = "Prestamos/Devoluciones";
             this.btnPrestamos.UseVisualStyleBackColor = true;
             this.btnPrestamos.Click += new System.EventHandler(this.btnPrestamos_Click);
             // 
             // lblFiltroCodigo
             // 
             this.lblFiltroCodigo.AutoSize = true;
-            this.lblFiltroCodigo.Location = new System.Drawing.Point(176, 276);
+            this.lblFiltroCodigo.Location = new System.Drawing.Point(173, 261);
             this.lblFiltroCodigo.Name = "lblFiltroCodigo";
             this.lblFiltroCodigo.Size = new System.Drawing.Size(68, 13);
             this.lblFiltroCodigo.TabIndex = 43;
@@ -230,42 +232,65 @@
             // 
             // txtFiltrarCodigo
             // 
-            this.txtFiltrarCodigo.Location = new System.Drawing.Point(12, 273);
+            this.txtFiltrarCodigo.Location = new System.Drawing.Point(12, 258);
             this.txtFiltrarCodigo.Name = "txtFiltrarCodigo";
             this.txtFiltrarCodigo.Size = new System.Drawing.Size(158, 20);
             this.txtFiltrarCodigo.TabIndex = 44;
             this.txtFiltrarCodigo.TextChanged += new System.EventHandler(this.txtFiltrarCodigo_TextChanged);
             // 
-            // btnDevoluciones
+            // cmbGenero
             // 
-            this.btnDevoluciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDevoluciones.Location = new System.Drawing.Point(462, 282);
-            this.btnDevoluciones.Name = "btnDevoluciones";
-            this.btnDevoluciones.Size = new System.Drawing.Size(158, 23);
-            this.btnDevoluciones.TabIndex = 45;
-            this.btnDevoluciones.Text = "Devolver";
-            this.btnDevoluciones.UseVisualStyleBackColor = true;
-            this.btnDevoluciones.Click += new System.EventHandler(this.btnDevoluciones_Click);
+            this.cmbGenero.FormattingEnabled = true;
+            this.cmbGenero.Items.AddRange(new object[] {
+            "Terror",
+            "Policial",
+            "Infantil",
+            "Ciencia Ficción",
+            "Autoayuda",
+            "Educativos",
+            "Cocina",
+            "Otro"});
+            this.cmbGenero.Location = new System.Drawing.Point(118, 116);
+            this.cmbGenero.Name = "cmbGenero";
+            this.cmbGenero.Size = new System.Drawing.Size(100, 21);
+            this.cmbGenero.TabIndex = 47;
             // 
-            // btnGestor
+            // lblGenero
             // 
-            this.btnGestor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGestor.Location = new System.Drawing.Point(655, 282);
-            this.btnGestor.Name = "btnGestor";
-            this.btnGestor.Size = new System.Drawing.Size(158, 23);
-            this.btnGestor.TabIndex = 46;
-            this.btnGestor.Text = "Gestor de Prestamos";
-            this.btnGestor.UseVisualStyleBackColor = true;
-            this.btnGestor.Click += new System.EventHandler(this.btnGestor_Click);
+            this.lblGenero.AutoSize = true;
+            this.lblGenero.Location = new System.Drawing.Point(45, 119);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(42, 13);
+            this.lblGenero.TabIndex = 48;
+            this.lblGenero.Text = "Género";
+            // 
+            // lblFiltroGenero
+            // 
+            this.lblFiltroGenero.AutoSize = true;
+            this.lblFiltroGenero.Location = new System.Drawing.Point(173, 287);
+            this.lblFiltroGenero.Name = "lblFiltroGenero";
+            this.lblFiltroGenero.Size = new System.Drawing.Size(70, 13);
+            this.lblFiltroGenero.TabIndex = 49;
+            this.lblFiltroGenero.Text = "Filtrar Género";
+            // 
+            // txtFiltrarGenero
+            // 
+            this.txtFiltrarGenero.Location = new System.Drawing.Point(12, 284);
+            this.txtFiltrarGenero.Name = "txtFiltrarGenero";
+            this.txtFiltrarGenero.Size = new System.Drawing.Size(158, 20);
+            this.txtFiltrarGenero.TabIndex = 50;
+            this.txtFiltrarGenero.TextChanged += new System.EventHandler(this.txtFiltrarGenero_TextChanged);
             // 
             // GestorLibros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
-            this.ClientSize = new System.Drawing.Size(825, 316);
-            this.Controls.Add(this.btnGestor);
-            this.Controls.Add(this.btnDevoluciones);
+            this.ClientSize = new System.Drawing.Size(931, 316);
+            this.Controls.Add(this.txtFiltrarGenero);
+            this.Controls.Add(this.lblFiltroGenero);
+            this.Controls.Add(this.lblGenero);
+            this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.txtFiltrarCodigo);
             this.Controls.Add(this.lblFiltroCodigo);
             this.Controls.Add(this.btnPrestamos);
@@ -319,8 +344,10 @@
         private System.Windows.Forms.Button btnPrestamos;
         private System.Windows.Forms.TextBox txtFiltrarCodigo;
         private System.Windows.Forms.Label lblFiltroCodigo;
-        private System.Windows.Forms.Button btnDevoluciones;
-        private System.Windows.Forms.Button btnGestor;
+        private System.Windows.Forms.Label lblGenero;
+        private System.Windows.Forms.ComboBox cmbGenero;
+        private System.Windows.Forms.TextBox txtFiltrarGenero;
+        private System.Windows.Forms.Label lblFiltroGenero;
     }
 }
 
