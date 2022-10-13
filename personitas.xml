@@ -1,2 +1,9 @@
 <?xml version="1.0" standalone="yes"?>
-<DocumentElement />
+<DocumentElement>
+  <personas>
+    <Nombres>Thomas</Nombres>
+    <Apellidos>Dergazarian</Apellidos>
+    <DNI>44653854</DNI>
+    <Código>6</Código>
+  </personas>
+</DocumentElement>

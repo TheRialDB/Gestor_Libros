@@ -139,6 +139,7 @@ namespace Gestor_Libros
 
                     //-------------------------------------------------------------------------operador ternario
                     dtLibros.Rows.Add(new object[] { codigo, titulo, autor, editorial, genero, disponibilidad == "Disponible" ? "Prestado" : "Disponible" });
+                    dtLibros.WriteXml(DIRECCION_XML + "librito.xml");
                 }
             }
         }

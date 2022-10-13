@@ -41,22 +41,6 @@
     <Estado>Disponible</Estado>
   </libros>
   <libros>
-    <Código>5</Código>
-    <Título>La Vuelta al Mundo en 80 Dias</Título>
-    <Autor>Julio Verne</Autor>
-    <Editorial>cualquiera</Editorial>
-    <Género>Otro</Género>
-    <Estado>Disponible</Estado>
-  </libros>
-  <libros>
-    <Código>6</Código>
-    <Título>IT</Título>
-    <Autor>Stephen King</Autor>
-    <Editorial>alguna</Editorial>
-    <Género>Terror</Género>
-    <Estado>Disponible</Estado>
-  </libros>
-  <libros>
     <Código>7</Código>
     <Título>El Principito</Título>
     <Autor>Antoine de Saint-Exupéry</Autor>
@@ -70,14 +54,6 @@
     <Autor>J. K. Rowling</Autor>
     <Editorial>otra</Editorial>
     <Género>Otro</Género>
-    <Estado>Disponible</Estado>
-  </libros>
-  <libros>
-    <Código>9</Código>
-    <Título>Chapeucinho Vermelho</Título>
-    <Autor>Anónimo</Autor>
-    <Editorial>de alguien</Editorial>
-    <Género>Infantil</Género>
     <Estado>Disponible</Estado>
   </libros>
   <libros>
@@ -102,6 +78,30 @@
     <Autor>Stephen King</Autor>
     <Editorial>otra</Editorial>
     <Género>Ciencia Ficción</Género>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>5</Código>
+    <Título>La Vuelta al Mundo en 80 Dias</Título>
+    <Autor>Julio Verne</Autor>
+    <Editorial>cualquiera</Editorial>
+    <Género>Otro</Género>
+    <Estado>Disponible</Estado>
+  </libros>
+  <libros>
+    <Código>6</Código>
+    <Título>IT</Título>
+    <Autor>Stephen King</Autor>
+    <Editorial>alguna</Editorial>
+    <Género>Terror</Género>
+    <Estado>Prestado</Estado>
+  </libros>
+  <libros>
+    <Código>9</Código>
+    <Título>Chapeucinho Vermelho</Título>
+    <Autor>Anónimo</Autor>
+    <Editorial>de alguien</Editorial>
+    <Género>Infantil</Género>
     <Estado>Disponible</Estado>
   </libros>
 </DocumentElement>
